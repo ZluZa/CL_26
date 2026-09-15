@@ -5,6 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>3D-печать</title>
     <link rel="shortcut icon" href="TemplateData/icon.ico">
+    <link rel="preload" href="TemplateData/festival-webgl-placeholder.webp" as="image" type="image/webp" fetchpriority="high">
     <link rel="stylesheet" href="TemplateData/style.css">
     <link rel="preload" href="TemplateData/fonts/CeraRoundPro-Medium.woff2" as="font" type="font/woff2" crossorigin>
     <noscript><div><img src="https://top-fwz1.mail.ru/counter?id=3269728;js=na" style="position:absolute;left:-9999px;" alt="Top.Mail.Ru" /></div></noscript>
@@ -128,11 +129,11 @@
 
 
     var buildUrl = "Build";
-    var loaderUrl = buildUrl + "/0.9.0_test_1.loader.js";
+    var loaderUrl = buildUrl + "/0.9.1_test.loader.js";
     var config = {
-        dataUrl: buildUrl + "/0.9.0_test_1.data",
-        frameworkUrl: buildUrl + "/0.9.0_test_1.framework.js",
-        codeUrl: buildUrl + "/0.9.0_test_1.wasm",
+        dataUrl: buildUrl + "/0.9.1_test.data",
+        frameworkUrl: buildUrl + "/0.9.1_test.framework.js",
+        codeUrl: buildUrl + "/0.9.1_test.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "3D-печать",
         productName: "3D-печать",
