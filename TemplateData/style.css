@@ -3,7 +3,7 @@
     /* Соотношение сторон фонового изображения в #bg-overlay (по умолчанию 16:9). При другой картинке обновите это значение. */
     --bg-aspect: calc(16 / 9);
 
-    /* Метрики кнопки "Полетели!" */
+    /* Метрики кнопки запуска */
     --start-bottom: clamp(8px, 2vmin, 24px);
     --btn-font: clamp(16px, 3.2vmin, 42px);
     --btn-pad-v: clamp(10px, 1.6vmin, 25px);
@@ -209,7 +209,7 @@ body {
     font-weight: 500;
     line-height: 1.2;
     color: #fff;
-    background: #36be8b;
+    background: #6B29B9;
     border: 2px;
     border-radius: var(--btn-radius);
     cursor: pointer;
@@ -222,7 +222,7 @@ body {
 }
  
 
-#start-button:hover { background: #43a047; }
+#start-button:hover { background: #5B239D; }
 #start-button:active { transform: translateX(-50%) scale(0.98); }
 
 @media (max-width: 768px) {
