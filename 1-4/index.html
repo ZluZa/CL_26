@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UCSber26</title>
+</head>
+<body>
+  <p>Загрузка игры…</p>
+  <script>
+    const target = new URL('../Unified/index.html', window.location.href);
+    const sourceParams = new URLSearchParams(window.location.search);
+    sourceParams.set('entry', '1-4');
+    target.search = sourceParams.toString();
+    target.hash = window.location.hash;
+    window.location.replace(target.href);
+  </script>
+</body>
+</html>
