@@ -200,11 +200,11 @@
 
 
     var buildUrl = "Build";
-    var loaderUrl = buildUrl + "/1.0.2_test.loader.js";
+    var loaderUrl = buildUrl + "/1.0.2.2.loader.js";
     var config = {
-        dataUrl: buildUrl + "/1.0.2_test.data",
-        frameworkUrl: buildUrl + "/1.0.2_test.framework.js",
-        codeUrl: buildUrl + "/1.0.2_test.wasm",
+        dataUrl: buildUrl + "/1.0.2.2.data",
+        frameworkUrl: buildUrl + "/1.0.2.2.framework.js",
+        codeUrl: buildUrl + "/1.0.2.2.wasm",
         cacheControl: function (url) {
             var path = url.split(/[?#]/, 1)[0];
             var filename = path.substring(path.lastIndexOf("/") + 1);
