@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72">
+  <!-- Isometric Studio/printer.png: amber enclosure, violet base, cyan display. -->
+  <!-- Base: both visible faces follow the enclosure's isometric axes. -->
+  <path d="M6 43 36 26 66 43 36 60Z" fill="#a18cdd"/>
+  <path d="M6 43 36 60V70L6 53Z" fill="#41336f"/>
+  <path d="M36 60 66 43V53L36 70Z" fill="#8471ca"/>
+  <!-- Amber walls and lighter roof. -->
+  <path d="M8 18 36 34V59L8 43Z" fill="#b56b35"/>
+  <path d="M36 34 64 18V43L36 59Z" fill="#e6a547"/>
+  <path d="M8 18 36 2 64 18 36 34Z" fill="#ffdf86"/>
+  <path d="M16 17 36 6 56 17 36 28Z" fill="#fff2b0"/>
+  <!-- Print bed and small printed object. -->
+  <path d="M14 43 36 31 58 43 36 55Z" fill="#80505a"/>
+  <path d="M21 43 36 35 51 43 36 51Z" fill="#d49d62"/>
+  <!-- Motion rail, print head and nozzle, visible through the enclosure. -->
+  <path d="M19 25V43M51 25V43" stroke="#85503e" stroke-width="3"/>
+  <path d="M18 24 44 39 54 33" fill="none" stroke="#563b54" stroke-width="4"/>
+  <path d="M27 27 36 22 45 27 36 32Z" fill="#a47758"/>
+  <path d="M27 27 36 32V38L27 33Z" fill="#51374c"/>
+  <path d="M36 32 45 27V33L36 38Z" fill="#795243"/>
+  <path d="M33 37H39L36 42Z" fill="#fff2b0"/>
+  <path d="M28 44 36 40 44 44 36 48Z" fill="#b2ffc8"/>
+  <path d="M28 44 36 48V53L28 49Z" fill="#37b9c5"/>
+  <path d="M36 48 44 44V49L36 53Z" fill="#63dfbf"/>
+  <!-- Bright enclosure edges keep the silhouette legible at favicon sizes. -->
+  <path d="M8 43V18L36 2 64 18V43L36 59ZM8 18 36 34 64 18M36 34V59"
+        fill="none" stroke="#ffe6a0" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M46 57 60 49V55L46 63Z" fill="#44337b"/>
+  <path d="M48 57 58 51V54L48 60Z" fill="#66d9ff"/>
+</svg>

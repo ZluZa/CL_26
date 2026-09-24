@@ -246,10 +246,12 @@
     <type fullname="Spine.Unity.SkeletonAnimation" preserve="all" />
     <type fullname="Spine.Unity.SkeletonDataAsset" preserve="all" />
     <type fullname="Spine.Unity.SkeletonGraphic" preserve="all" />
+    <type fullname="Spine.Unity.SkeletonRendererCustomMaterials" preserve="all" />
     <type fullname="Spine.Unity.SpineAtlasAsset" preserve="all" />
     <type fullname="Spine.Unity.MeshGenerator" preserve="nothing" serialized="true" />
     <type fullname="Spine.Unity.MeshGenerator/Settings" preserve="nothing" serialized="true" />
     <type fullname="Spine.Unity.SkeletonRenderer/SpriteMaskInteractionMaterials" preserve="nothing" serialized="true" />
+    <type fullname="Spine.Unity.SkeletonRendererCustomMaterials/AtlasMaterialOverride" preserve="nothing" serialized="true" />
     <type fullname="Spine.Unity.BlendModeMaterials" preserve="nothing" serialized="true" />
     <type fullname="Spine.Unity.BlendModeMaterials/ReplacementMaterial" preserve="nothing" serialized="true" />
   </assembly>
@@ -276,6 +278,7 @@
     <type fullname="UnityEngine.ResourceManagement.ResourceProviders.SceneProvider" preserve="all" />
   </assembly>
   <assembly fullname="Unity.TextMeshPro, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="TMPro.TextMeshPro" preserve="all" />
     <type fullname="TMPro.TextMeshProUGUI" preserve="all" />
     <type fullname="TMPro.TMP_FontAsset" preserve="all" />
     <type fullname="TMPro.VertexGradient" preserve="nothing" serialized="true" />

@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>3D-печать</title>
-    <link rel="shortcut icon" href="TemplateData/icon.ico">
+    <title>ИИ: 3D-технологии</title>
+    <link rel="icon" type="image/svg+xml" href="TemplateData/ai-3d-favicon.svg">
     <link rel="preload" href="TemplateData/festival-loading.webp" as="image" type="image/webp" fetchpriority="high">
     <link rel="preload" href="TemplateData/loading-companions.webp" as="image" type="image/webp">
     <link rel="stylesheet" href="TemplateData/style.css">
@@ -59,7 +59,6 @@
     var playerLoadProgress = 0;
     var contentLoadProgress = 0;
     var contentReady = false;
-    var loadingCompletionStarted = false;
 
     function dismissLoadingScreen() {
         if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
@@ -85,37 +84,17 @@
     }
 
     function updateLoadingProgress() {
-        var percent = loadingCompletionStarted ? 100 : Math.max(0, Math.min(100, 20 * playerLoadProgress + 80 * contentLoadProgress));
+        var percent = Math.max(0, Math.min(100, 20 * playerLoadProgress + 80 * contentLoadProgress));
         progressBarFull.style.width = percent + "%";
         progressBarEmpty.setAttribute("aria-valuenow", Math.round(percent));
     }
 
     function showStartWhenReady() {
-        if (!MyGameInstance || !contentReady || loadingCompletionStarted) return;
-        loadingCompletionStarted = true;
-        var completed = false;
-        var fallback;
-        function finish() {
-            if (completed) return;
-            completed = true;
-            clearTimeout(fallback);
-            progressBarFull.removeEventListener("transitionend", onTransitionEnd);
-            // Keep the full bar visible briefly before replacing it with the button.
-            setTimeout(function() {
-                progressBarEmpty.style.display = "none";
-                loadingLabel.textContent = "";
-                loadingBar.classList.add("is-ready");
-                startButton.style.display = "inline-block";
-            }, 150);
-        }
-        function onTransitionEnd(event) {
-            if (event.target === progressBarFull && event.propertyName === "width") finish();
-        }
-        progressBarFull.addEventListener("transitionend", onTransitionEnd);
-        updateLoadingProgress();
-        // Longer than the .35s CSS transition; also handles an already full bar.
-        fallback = setTimeout(finish, 500);
-        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) finish();
+        if (!MyGameInstance || !contentReady) return;
+        progressBarEmpty.style.display = "none";
+        loadingLabel.textContent = "";
+        loadingBar.classList.add("is-ready");
+        startButton.style.display = "inline-block";
     }
 
     window.ucsberContentProgress = function(progress) {
@@ -221,11 +200,11 @@
 
 
     var buildUrl = "Build";
-    var loaderUrl = buildUrl + "/1.0.2.loader.js";
+    var loaderUrl = buildUrl + "/1.0.2_test.loader.js";
     var config = {
-        dataUrl: buildUrl + "/1.0.2.data",
-        frameworkUrl: buildUrl + "/1.0.2.framework.js",
-        codeUrl: buildUrl + "/1.0.2.wasm",
+        dataUrl: buildUrl + "/1.0.2_test.data",
+        frameworkUrl: buildUrl + "/1.0.2_test.framework.js",
+        codeUrl: buildUrl + "/1.0.2_test.wasm",
         cacheControl: function (url) {
             var path = url.split(/[?#]/, 1)[0];
             var filename = path.substring(path.lastIndexOf("/") + 1);
