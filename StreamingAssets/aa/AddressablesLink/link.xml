@@ -146,6 +146,7 @@
     <type fullname="MainCL.Minigames.sber26.Scanning.ScanningMinigameView/PlacementCellView" preserve="nothing" serialized="true" />
     <type fullname="MainCL.Minigames.sber26.Scanning.ScanningMinigameView/PlacementItemView" preserve="nothing" serialized="true" />
     <type fullname="MainCL.Minigames.sber26.Scanning.ScanningMinigameView/PlacementVariantView" preserve="nothing" serialized="true" />
+    <type fullname="MainCL.Data.RatingThresholds/RatingRange" preserve="nothing" serialized="true" />
     <type fullname="MainCL.Gameplay.MetaGame.FestivalQuestCollectionProgressUnityEvent" preserve="nothing" serialized="true" />
     <type fullname="MainCL.Gameplay.MetaGame.FestivalQuestSceneBinding" preserve="nothing" serialized="true" />
     <type fullname="MainCL.Gameplay.MetaGame.StudioUpgradeItemUnityEvent" preserve="nothing" serialized="true" />
@@ -184,7 +185,6 @@
     <type fullname="MainCL.Data.MinigamesData.sber26.PrintingGraphNodeData" preserve="nothing" serialized="true" />
     <type fullname="MainCL.Data.MinigamesData.sber26.PrintingSimulationData" preserve="nothing" serialized="true" />
     <type fullname="MainCL.Data.MinigamesData.sber26.ThreeDPrintingMinigameData/TutorialTexts" preserve="nothing" serialized="true" />
-    <type fullname="MainCL.Data.RatingThresholds/RatingRange" preserve="nothing" serialized="true" />
   </assembly>
   <assembly fullname="Fungus, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
     <type fullname="Fungus.Block" preserve="all" />

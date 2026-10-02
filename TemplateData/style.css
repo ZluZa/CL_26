@@ -33,7 +33,6 @@ body { background: #102a3e; font-family: 'CeraRoundPro', Arial, sans-serif; }
     transform: translate(-50%, -50%); width: min(92vw, 1180px, 174vh);
     aspect-ratio: 2 / 1; text-align: center;
 }
-.loading-companions { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; pointer-events: none; animation: hover-orbit 5s ease-in-out infinite; }
 .loading-controls { position: absolute; width: 65%; left: 17.5%; top: 50%; transform: translateY(-50%); height: var(--control-height); }
 #loading-label {
     position: absolute; bottom: calc(100% + 17px); left: 0; width: 100%;
@@ -78,8 +77,30 @@ body { background: #102a3e; font-family: 'CeraRoundPro', Arial, sans-serif; }
 #unity-footer { display: none; }
 #unity-fullscreen-button { display: none; position: fixed; bottom: 20px; right: 20px; width: 50px; height: 50px; background: #0009 url('fullscreen-button.png') center / 60% no-repeat; border: 2px solid #ffffffb3; border-radius: 10px; cursor: pointer; z-index: 1000; }
 #unity-warning { position: absolute; z-index: 20; left: 50%; top: 5%; transform: translateX(-50%); width: min(90%, 700px); display: none; color: #fff; }
+#orientation-blocker {
+    position: absolute; inset: 0; z-index: 2000; display: flex;
+    align-items: center; justify-content: center; padding: 28px; overflow: auto;
+    background: radial-gradient(ellipse at 50% 35%, #23506b, #102a3e 75%);
+    color: #fff; text-align: center; touch-action: none; overscroll-behavior: contain;
+}
+#orientation-blocker[hidden] { display: none; }
+#orientation-blocker:focus { outline: none; }
+.orientation-card { width: min(100%, 420px); }
+.orientation-illustration { position: relative; width: 180px; height: 180px; margin: 0 auto 24px; }
+.orientation-arrow { position: absolute; inset: 0; width: 100%; height: 100%; fill: none; stroke: #a8ffe4; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+.orientation-device {
+    position: absolute; width: 62px; height: 104px; left: 59px; top: 55px;
+    border: 4px solid #e2fff4; border-radius: 13px; background: #163b53;
+    box-shadow: 0 0 24px #54f5e640; animation: rotate-device 2.8s ease-in-out infinite;
+}
+.orientation-device::before { content: ''; position: absolute; width: 20px; height: 4px; top: 6px; left: 17px; border-radius: 4px; background: #a8ffe4; }
+.orientation-device span { position: absolute; inset: 18px 6px 8px; border-radius: 5px; background: linear-gradient(145deg, #26b7ff, #3ce3e3 65%, #99ff7e); }
+#orientation-title { font-size: clamp(25px, 6vw, 34px); font-weight: 500; line-height: 1.15; margin: 0 0 16px; }
+#orientation-description { font-size: 19px; line-height: 1.45; margin: 0; }
+.orientation-hint { color: #b8d9e6; font-size: 16px; line-height: 1.45; margin: 18px 0 0; }
+@keyframes rotate-device { 0%, 15% { transform: rotate(0); } 55%, 85% { transform: rotate(90deg); } 100% { transform: rotate(0); } }
+@media (prefers-reduced-motion: reduce) { .orientation-device { transform: rotate(90deg); } }
 @keyframes energy-flow { to { background-position: 142px 0; } }
-@keyframes hover-orbit { 50% { transform: translateY(-6px); } }
 @keyframes loading-letter-wave {
     0%, 60%, 100% { transform: translateY(0); }
     30% { transform: translateY(-.15em); }

@@ -7,7 +7,6 @@
     <title>ИИ: 3D-технологии</title>
     <link rel="icon" type="image/svg+xml" href="TemplateData/ai-3d-favicon.svg">
     <link rel="preload" href="TemplateData/festival-loading.webp" as="image" type="image/webp" fetchpriority="high">
-    <link rel="preload" href="TemplateData/loading-companions.webp" as="image" type="image/webp">
     <link rel="stylesheet" href="TemplateData/style.css">
     <link rel="preload" href="TemplateData/fonts/CeraRoundPro-Medium.woff2" as="font" type="font/woff2" crossorigin>
     <noscript><div><img src="https://top-fwz1.mail.ru/counter?id=3269728;js=na" style="position:absolute;left:-9999px;" alt="Top.Mail.Ru" /></div></noscript>
@@ -20,7 +19,6 @@
         <div id="loading-screen">
             <div id="bg-overlay" aria-hidden="true"></div>
             <div id="unity-loading-bar">
-                <img class="loading-companions" src="TemplateData/loading-companions.webp" alt="" aria-hidden="true">
                 <div class="loading-controls">
                     <div id="loading-label" role="status"><span class="sr-only">Загрузка...</span><span class="loading-wave" aria-hidden="true">Загрузка...</span></div>
                     <div id="unity-progress-bar-empty" role="progressbar" aria-label="Загрузка игры" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
@@ -33,7 +31,18 @@
         <div id="unity-warning"> </div>
         <div id="unity-footer">
             <div id="unity-webgl-logo"></div>
-            <div id="unity-build-title">3D-печать</div>
+            <div id="unity-build-title">Project Template</div>
+        </div>
+        <div id="orientation-blocker" role="dialog" aria-modal="true" aria-labelledby="orientation-title" aria-describedby="orientation-description" tabindex="-1" hidden>
+            <div class="orientation-card">
+                <div class="orientation-illustration" aria-hidden="true">
+                    <svg class="orientation-arrow" viewBox="0 0 180 180"><path d="M35 65a60 60 0 0 1 110-8m-1-25 3 29-29-3" /></svg>
+                    <div class="orientation-device"><span></span></div>
+                </div>
+                <h1 id="orientation-title">Поверните устройство</h1>
+                <p id="orientation-description">Для прохождения тренажёра нужен горизонтальный экран.</p>
+                <p class="orientation-hint">Игра на паузе. Продолжим после поворота.</p>
+            </div>
         </div>
     </div>
 </div>
@@ -59,6 +68,53 @@
     var playerLoadProgress = 0;
     var contentLoadProgress = 0;
     var contentReady = false;
+    var orientationBlocker = document.querySelector("#orientation-blocker");
+    var portraitQuery = window.matchMedia("(orientation: portrait)");
+    var orientationPaused = false;
+    var sentOrientationPaused = null;
+    var focusBeforeOrientationPause = null;
+    var gameStarted = false;
+
+    function syncOrientationPause() {
+        // Bootstrap belongs to the trainer scene, which may still be downloading.
+        if (!MyGameInstance || !contentReady || sentOrientationPaused === orientationPaused) return;
+        if (!orientationPaused && window.ucsberSetPlayerLoopPaused) window.ucsberSetPlayerLoopPaused(false);
+        MyGameInstance.SendMessage("Bootstrap", "SetOrientationPaused", orientationPaused ? 1 : 0);
+        sentOrientationPaused = orientationPaused;
+        // Also stop unscaled Update/animations once gameplay has started. Loading remains active.
+        if (gameStarted && orientationPaused && window.ucsberSetPlayerLoopPaused) window.ucsberSetPlayerLoopPaused(true);
+    }
+
+    function updateOrientation() {
+        var paused = portraitQuery.matches;
+        if (paused !== orientationPaused) {
+            orientationPaused = paused;
+            orientationBlocker.hidden = !paused;
+            [canvas, loadingScreen, fullscreenButton].forEach(function(element) { element.inert = paused; });
+            if (paused) {
+                focusBeforeOrientationPause = document.activeElement;
+                orientationBlocker.focus({ preventScroll: true });
+            } else if (focusBeforeOrientationPause && focusBeforeOrientationPause.isConnected) {
+                focusBeforeOrientationPause.focus({ preventScroll: true });
+            }
+        }
+        syncOrientationPause();
+    }
+
+    // Unity can listen for keyboard events on the document, outside the canvas.
+    ["keydown", "keyup", "keypress"].forEach(function(type) {
+        window.addEventListener(type, function(event) {
+            if (!orientationPaused) return;
+            event.preventDefault();
+            event.stopImmediatePropagation();
+        }, true);
+    });
+    if (portraitQuery.addEventListener) portraitQuery.addEventListener("change", updateOrientation);
+    else portraitQuery.addListener(updateOrientation);
+    window.addEventListener("resize", updateOrientation);
+    window.addEventListener("orientationchange", updateOrientation);
+    document.addEventListener("fullscreenchange", updateOrientation);
+    updateOrientation();
 
     function dismissLoadingScreen() {
         if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
@@ -105,6 +161,8 @@
         contentReady = true;
         contentLoadProgress = 1;
         updateLoadingProgress();
+        sentOrientationPaused = null;
+        syncOrientationPause();
         showStartWhenReady();
     };
     window.ucsberContentError = function() {
@@ -200,11 +258,11 @@
 
 
     var buildUrl = "Build";
-    var loaderUrl = buildUrl + "/1.0.2.2.loader.js";
+    var loaderUrl = buildUrl + "/1.0.5_test.loader.js";
     var config = {
-        dataUrl: buildUrl + "/1.0.2.2.data",
-        frameworkUrl: buildUrl + "/1.0.2.2.framework.js",
-        codeUrl: buildUrl + "/1.0.2.2.wasm",
+        dataUrl: buildUrl + "/1.0.5_test.data",
+        frameworkUrl: buildUrl + "/1.0.5_test.framework.js",
+        codeUrl: buildUrl + "/1.0.5_test.wasm",
         cacheControl: function (url) {
             var path = url.split(/[?#]/, 1)[0];
             var filename = path.substring(path.lastIndexOf("/") + 1);
@@ -222,8 +280,8 @@
             return "no-store";
         },
         streamingAssetsUrl: "StreamingAssets",
-        companyName: "3D-печать",
-        productName: "3D-печать",
+        companyName: "DefaultCompany",
+        productName: "Project Template",
         productVersion: "1.0"
     };
     // By default Unity keeps WebGL canvas render target size matched with
@@ -249,8 +307,6 @@
         canvas.style.width = window.innerWidth + 'px';
         canvas.style.height = window.innerHeight + 'px';
         //    unityShowBanner('Рекомендуется для прохождения на ПК.');
-        alert('Рекомендуется проходить на ПК.' +
-            'Проходить на мобильных устройствах лучше в горизонтальном расположении экрана');
     } else {
         html.className = "desktop";
     }
@@ -266,12 +322,14 @@
         }).then((unityInstance) => {
             // Сохраняем инстанс, скрываем прогресс-бар и показываем кнопку "Начать"
             MyGameInstance = unityInstance;
+            syncOrientationPause();
             showStartWhenReady();
 
             // По клику запускаем игру: скрываем загрузчик и настраиваем фуллскрин
             startButton.onclick = () => {
-                if (startButton.disabled) return;
+                if (startButton.disabled || orientationPaused) return;
                 startButton.disabled = true;
+                gameStarted = true;
                 dismissLoadingScreen();
                 // Снимаем паузу в Unity (имя GO: Bootstrap, метод: Unpause)
                 if (MyGameInstance) {
@@ -297,7 +355,12 @@
 
                     fullscreenButton.onclick = () => {
                         if (MyGameInstance) {
-                            MyGameInstance.SetFullscreen(1);
+                            // Keep the HTML blocker in the fullscreen tree alongside the canvas.
+                            var requestFullscreen = container.requestFullscreen || container.webkitRequestFullscreen;
+                            if (requestFullscreen) {
+                                var request = requestFullscreen.call(container);
+                                if (request && request.catch) request.catch(console.warn);
+                            }
                         } else {
                             console.error("Unity instance not found!");
                         }
