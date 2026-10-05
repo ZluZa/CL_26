@@ -258,11 +258,11 @@
 
 
     var buildUrl = "Build";
-    var loaderUrl = buildUrl + "/1.0.8_test.loader.js";
+    var loaderUrl = buildUrl + "/1.0.9.loader.js";
     var config = {
-        dataUrl: buildUrl + "/1.0.8_test.data",
-        frameworkUrl: buildUrl + "/1.0.8_test.framework.js",
-        codeUrl: buildUrl + "/1.0.8_test.wasm",
+        dataUrl: buildUrl + "/1.0.9.data",
+        frameworkUrl: buildUrl + "/1.0.9.framework.js",
+        codeUrl: buildUrl + "/1.0.9.wasm",
         cacheControl: function (url) {
             var path = url.split(/[?#]/, 1)[0];
             var filename = path.substring(path.lastIndexOf("/") + 1);
@@ -280,7 +280,7 @@
             return "no-store";
         },
         streamingAssetsUrl: "StreamingAssets",
-        companyName: "DefaultCompany",
+        companyName: "Sber",
         productName: "Project Template",
         productVersion: "1.0"
     };
