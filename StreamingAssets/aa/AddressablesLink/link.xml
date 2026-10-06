@@ -115,14 +115,10 @@
     <type fullname="MainCL.Utils.TutorialBuilder" preserve="all" />
     <type fullname="Utils.CursorHover" preserve="all" />
     <type fullname="WebGLStartGate" preserve="all" />
-    <type fullname="MainCL.Gameplay.DebugButtons" preserve="nothing" serialized="true" />
-    <type fullname="MainCL.Minigames.sber26.ModelingPrinting.ModelingPrintingMinigameView/AiIterationView" preserve="nothing" serialized="true" />
-    <type fullname="MainCL.Minigames.sber26.ModelingPrinting.ModelingPrintingMinigameView/ArtworkButtonView" preserve="nothing" serialized="true" />
-    <type fullname="MainCL.Minigames.sber26.ModelingPrinting.ModelingPrintingMinigameView/GridCellView" preserve="nothing" serialized="true" />
-    <type fullname="MainCL.Minigames.sber26.ModelingPrinting.ModelingPrintingMinigameView/ProgramSlotView" preserve="nothing" serialized="true" />
     <type fullname="MainCL.Canvases.DialogCanvas/DialogScene" preserve="nothing" serialized="true" />
     <type fullname="MainCL.Canvases.LoadingScreenCanvas/DirectionAnimationProfile" preserve="nothing" serialized="true" />
     <type fullname="MainCL.Canvases.SceneCanvas/LocationTransitionAnimationSettings" preserve="nothing" serialized="true" />
+    <type fullname="MainCL.Commands.LinearDialogChoiceOption" preserve="nothing" serialized="true" />
     <type fullname="MainCL.Managers.Context.CameraManagerContext" preserve="nothing" serialized="true" />
     <type fullname="MainCL.Managers.Context.CharactersManagerContext" preserve="nothing" serialized="true" />
     <type fullname="MainCL.Managers.Context.MetaGameProgressManagerContext" preserve="nothing" serialized="true" />
@@ -131,60 +127,65 @@
     <type fullname="MainCL.Managers.Context.SoundManagerContext" preserve="nothing" serialized="true" />
     <type fullname="MainCL.Managers.Context.StarsManagerContext" preserve="nothing" serialized="true" />
     <type fullname="MainCL.Managers.Context.WebManagerContext" preserve="nothing" serialized="true" />
+    <type fullname="MainCL.Gameplay.MetaGame.FestivalQuestUnityEvent" preserve="nothing" serialized="true" />
+    <type fullname="MainCL.Gameplay.DebugButtons" preserve="nothing" serialized="true" />
+    <type fullname="MainCL.Gameplay.MetaGame.FestivalQuestCollectionProgressUnityEvent" preserve="nothing" serialized="true" />
+    <type fullname="MainCL.Gameplay.MetaGame.FestivalQuestSceneBinding" preserve="nothing" serialized="true" />
+    <type fullname="MainCL.Gameplay.MetaGame.FestivalStandStateUnityEvent" preserve="nothing" serialized="true" />
+    <type fullname="MainCL.Gameplay.MetaGame.MetaFestivalTaskDataUnityEvent" preserve="nothing" serialized="true" />
     <type fullname="MainCL.Gameplay.MetaGame.MetaFestivalTaskProgressUnityEvent" preserve="nothing" serialized="true" />
     <type fullname="MainCL.Gameplay.MetaGame.StudioTaskLearningFlow" preserve="nothing" serialized="true" />
+    <type fullname="MainCL.Gameplay.MetaGame.StudioUpgradeItemUnityEvent" preserve="nothing" serialized="true" />
+    <type fullname="MainCL.Gameplay.MetaGame.StudioUpgradePreviewAnimation" preserve="nothing" serialized="true" />
+    <type fullname="MainCL.Gameplay.MetaGame.StudioUpgradeProgressUnityEvent" preserve="nothing" serialized="true" />
+    <type fullname="MainCL.Gameplay.MetaGame.StudioUpgradeSceneObjectBinding" preserve="nothing" serialized="true" />
+    <type fullname="MainCL.Data.GlossaryEntryData" preserve="nothing" serialized="true" />
+    <type fullname="MainCL.Gameplay.Cutscene.CutsceneController/JuniorCut" preserve="nothing" serialized="true" />
+    <type fullname="MainCL.Data.RatingThresholds/RatingRange" preserve="nothing" serialized="true" />
+    <type fullname="MainCL.Data.FinishMinigameScreen" preserve="nothing" serialized="true" />
+    <type fullname="MainCL.Data.FungusDialogueBlockData" preserve="nothing" serialized="true" />
+    <type fullname="MainCL.Data.FungusDialogueCommandData" preserve="nothing" serialized="true" />
+    <type fullname="MainCL.Data.MinigameHelps" preserve="nothing" serialized="true" />
+    <type fullname="MainCL.Data.MinigameRules" preserve="nothing" serialized="true" />
+    <type fullname="MainCL.Data.MinigameRules/LevelStruct" preserve="nothing" serialized="true" />
+    <type fullname="MainCL.Data.MinigamesData.sber26.ModelingAiChoiceData" preserve="nothing" serialized="true" />
+    <type fullname="MainCL.Data.MinigamesData.sber26.ModelingAiIterationData" preserve="nothing" serialized="true" />
+    <type fullname="MainCL.Data.MinigamesData.sber26.ModelingGCodeCommandData" preserve="nothing" serialized="true" />
+    <type fullname="MainCL.Data.MinigamesData.sber26.ModelingPrintingMinigameData/TutorialTexts" preserve="nothing" serialized="true" />
+    <type fullname="MainCL.Data.MinigamesData.sber26.ModelingPromptCardData" preserve="nothing" serialized="true" />
     <type fullname="MainCL.Minigames.sber26.Modeling.ModelingMinigame/ChallengeArtworkBinding" preserve="nothing" serialized="true" />
     <type fullname="MainCL.Minigames.sber26.Modeling.ModelingMinigame/OperationOptionBinding" preserve="nothing" serialized="true" />
     <type fullname="MainCL.Minigames.sber26.Modeling.ModelingMinigame/ShapeOptionBinding" preserve="nothing" serialized="true" />
-    <type fullname="MainCL.Gameplay.MetaGame.FestivalQuestUnityEvent" preserve="nothing" serialized="true" />
-    <type fullname="MainCL.Gameplay.MetaGame.MetaFestivalTaskDataUnityEvent" preserve="nothing" serialized="true" />
-    <type fullname="MainCL.Commands.LinearDialogChoiceOption" preserve="nothing" serialized="true" />
-    <type fullname="MainCL.Gameplay.MetaGame.FestivalStandStateUnityEvent" preserve="nothing" serialized="true" />
+    <type fullname="MainCL.Data.MinigamesData.sber26.ModelingBooleanChallengeData" preserve="nothing" serialized="true" />
+    <type fullname="MainCL.Data.MinigamesData.sber26.ModelingMinigameData/TutorialTexts" preserve="nothing" serialized="true" />
     <type fullname="MainCL.Minigames.sber26.Scanning.ScanningMinigameView/DifferenceZoneView" preserve="nothing" serialized="true" />
     <type fullname="MainCL.Minigames.sber26.Scanning.ScanningMinigameView/ModelAngleView" preserve="nothing" serialized="true" />
     <type fullname="MainCL.Minigames.sber26.Scanning.ScanningMinigameView/ModelArtworkView" preserve="nothing" serialized="true" />
     <type fullname="MainCL.Minigames.sber26.Scanning.ScanningMinigameView/PlacementCellView" preserve="nothing" serialized="true" />
     <type fullname="MainCL.Minigames.sber26.Scanning.ScanningMinigameView/PlacementItemView" preserve="nothing" serialized="true" />
     <type fullname="MainCL.Minigames.sber26.Scanning.ScanningMinigameView/PlacementVariantView" preserve="nothing" serialized="true" />
-    <type fullname="MainCL.Data.RatingThresholds/RatingRange" preserve="nothing" serialized="true" />
-    <type fullname="MainCL.Gameplay.MetaGame.FestivalQuestCollectionProgressUnityEvent" preserve="nothing" serialized="true" />
-    <type fullname="MainCL.Gameplay.MetaGame.FestivalQuestSceneBinding" preserve="nothing" serialized="true" />
-    <type fullname="MainCL.Gameplay.MetaGame.StudioUpgradeItemUnityEvent" preserve="nothing" serialized="true" />
-    <type fullname="MainCL.Gameplay.MetaGame.StudioUpgradePreviewAnimation" preserve="nothing" serialized="true" />
-    <type fullname="MainCL.Gameplay.MetaGame.StudioUpgradeProgressUnityEvent" preserve="nothing" serialized="true" />
-    <type fullname="MainCL.Gameplay.MetaGame.StudioUpgradeSceneObjectBinding" preserve="nothing" serialized="true" />
-    <type fullname="MainCL.Data.GlossaryEntryData" preserve="nothing" serialized="true" />
-    <type fullname="MainCL.Data.FungusDialogueBlockData" preserve="nothing" serialized="true" />
-    <type fullname="MainCL.Data.FungusDialogueCommandData" preserve="nothing" serialized="true" />
-    <type fullname="MainCL.Data.FinishMinigameScreen" preserve="nothing" serialized="true" />
-    <type fullname="MainCL.Data.MinigameHelps" preserve="nothing" serialized="true" />
-    <type fullname="MainCL.Data.MinigameRules" preserve="nothing" serialized="true" />
-    <type fullname="MainCL.Data.MinigameRules/LevelStruct" preserve="nothing" serialized="true" />
-    <type fullname="MainCL.Data.MinigamesData.sber26.ScanningMinigameData/TutorialTexts" preserve="nothing" serialized="true" />
-    <type fullname="MainCL.Data.MinigamesData.sber26.ScanningModelData" preserve="nothing" serialized="true" />
-    <type fullname="MainCL.Data.MinigamesData.sber26.ScanningModelDifferenceData" preserve="nothing" serialized="true" />
-    <type fullname="MainCL.Data.MinigamesData.sber26.ScanningModelSetData" preserve="nothing" serialized="true" />
-    <type fullname="MainCL.Data.MinigamesData.sber26.ScanningPlacementItemData" preserve="nothing" serialized="true" />
-    <type fullname="MainCL.Data.MinigamesData.sber26.ScanningPlacementLayoutData" preserve="nothing" serialized="true" />
-    <type fullname="MainCL.Data.MinigamesData.sber26.ModelingAiChoiceData" preserve="nothing" serialized="true" />
-    <type fullname="MainCL.Data.MinigamesData.sber26.ModelingAiIterationData" preserve="nothing" serialized="true" />
-    <type fullname="MainCL.Data.MinigamesData.sber26.ModelingGCodeCommandData" preserve="nothing" serialized="true" />
-    <type fullname="MainCL.Data.MinigamesData.sber26.ModelingPrintingMinigameData/TutorialTexts" preserve="nothing" serialized="true" />
-    <type fullname="MainCL.Data.MinigamesData.sber26.ModelingPromptCardData" preserve="nothing" serialized="true" />
-    <type fullname="MainCL.Data.MinigamesData.sber26.ModelingBooleanChallengeData" preserve="nothing" serialized="true" />
-    <type fullname="MainCL.Data.MinigamesData.sber26.ModelingMinigameData/TutorialTexts" preserve="nothing" serialized="true" />
     <type fullname="MainCL.Data.MinigamesData.sber26.EquipmentRestData" preserve="nothing" serialized="true" />
     <type fullname="MainCL.Data.MinigamesData.sber26.EquipmentScheduleData" preserve="nothing" serialized="true" />
     <type fullname="MainCL.Data.MinigamesData.sber26.PrintingScheduleTaskData" preserve="nothing" serialized="true" />
     <type fullname="MainCL.Data.MinigamesData.sber26.ScanningPrintingMinigameData/TutorialTexts" preserve="nothing" serialized="true" />
     <type fullname="MainCL.Data.MinigamesData.sber26.ScheduleTargetSlotData" preserve="nothing" serialized="true" />
     <type fullname="MainCL.Data.MinigamesData.sber26.KnowledgeQuizMinigameData/TutorialTexts" preserve="nothing" serialized="true" />
+    <type fullname="MainCL.Data.MinigamesData.sber26.ScanningMinigameData/TutorialTexts" preserve="nothing" serialized="true" />
+    <type fullname="MainCL.Data.MinigamesData.sber26.ScanningModelData" preserve="nothing" serialized="true" />
+    <type fullname="MainCL.Data.MinigamesData.sber26.ScanningModelDifferenceData" preserve="nothing" serialized="true" />
+    <type fullname="MainCL.Data.MinigamesData.sber26.ScanningModelSetData" preserve="nothing" serialized="true" />
+    <type fullname="MainCL.Data.MinigamesData.sber26.ScanningPlacementItemData" preserve="nothing" serialized="true" />
+    <type fullname="MainCL.Data.MinigamesData.sber26.ScanningPlacementLayoutData" preserve="nothing" serialized="true" />
     <type fullname="MainCL.Data.MinigamesData.sber26.PrintingCalibrationLevelData" preserve="nothing" serialized="true" />
     <type fullname="MainCL.Data.MinigamesData.sber26.PrintingContourData" preserve="nothing" serialized="true" />
     <type fullname="MainCL.Data.MinigamesData.sber26.PrintingGraphEdgeData" preserve="nothing" serialized="true" />
     <type fullname="MainCL.Data.MinigamesData.sber26.PrintingGraphNodeData" preserve="nothing" serialized="true" />
     <type fullname="MainCL.Data.MinigamesData.sber26.PrintingSimulationData" preserve="nothing" serialized="true" />
     <type fullname="MainCL.Data.MinigamesData.sber26.ThreeDPrintingMinigameData/TutorialTexts" preserve="nothing" serialized="true" />
+    <type fullname="MainCL.Minigames.sber26.ModelingPrinting.ModelingPrintingMinigameView/AiIterationView" preserve="nothing" serialized="true" />
+    <type fullname="MainCL.Minigames.sber26.ModelingPrinting.ModelingPrintingMinigameView/ArtworkButtonView" preserve="nothing" serialized="true" />
+    <type fullname="MainCL.Minigames.sber26.ModelingPrinting.ModelingPrintingMinigameView/GridCellView" preserve="nothing" serialized="true" />
+    <type fullname="MainCL.Minigames.sber26.ModelingPrinting.ModelingPrintingMinigameView/ProgramSlotView" preserve="nothing" serialized="true" />
   </assembly>
   <assembly fullname="Fungus, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
     <type fullname="Fungus.Block" preserve="all" />
@@ -218,6 +219,7 @@
     <type fullname="Fungus.ColorData" preserve="nothing" serialized="true" />
     <type fullname="Fungus.ConditionExpression" preserve="nothing" serialized="true" />
     <type fullname="Fungus.FloatData" preserve="nothing" serialized="true" />
+    <type fullname="Fungus.FlowchartFrame" preserve="nothing" serialized="true" />
     <type fullname="Fungus.GameObjectData" preserve="nothing" serialized="true" />
     <type fullname="Fungus.IntegerData" preserve="nothing" serialized="true" />
     <type fullname="Fungus.MaterialData" preserve="nothing" serialized="true" />
@@ -234,7 +236,6 @@
     <type fullname="Fungus.Vector2Data" preserve="nothing" serialized="true" />
     <type fullname="Fungus.Vector3Data" preserve="nothing" serialized="true" />
     <type fullname="Fungus.Vector4Data" preserve="nothing" serialized="true" />
-    <type fullname="Fungus.FlowchartFrame" preserve="nothing" serialized="true" />
   </assembly>
   <assembly fullname="spine-timeline, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
     <type fullname="Spine.Unity.Playables.SpineAnimationStateClip" preserve="all" />
@@ -250,9 +251,9 @@
     <type fullname="Spine.Unity.SpineAtlasAsset" preserve="all" />
     <type fullname="Spine.Unity.MeshGenerator" preserve="nothing" serialized="true" />
     <type fullname="Spine.Unity.MeshGenerator/Settings" preserve="nothing" serialized="true" />
+    <type fullname="Spine.Unity.BlendModeMaterials" preserve="nothing" serialized="true" />
     <type fullname="Spine.Unity.SkeletonRenderer/SpriteMaskInteractionMaterials" preserve="nothing" serialized="true" />
     <type fullname="Spine.Unity.SkeletonRendererCustomMaterials/AtlasMaterialOverride" preserve="nothing" serialized="true" />
-    <type fullname="Spine.Unity.BlendModeMaterials" preserve="nothing" serialized="true" />
     <type fullname="Spine.Unity.BlendModeMaterials/ReplacementMaterial" preserve="nothing" serialized="true" />
   </assembly>
   <assembly fullname="SuperTextMesh, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
@@ -338,20 +339,20 @@
     <type fullname="UnityEngine.U2D.SpriteAtlas" preserve="all" />
     <type fullname="UnityEngine.Color" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Color32" preserve="nothing" serialized="true" />
-    <type fullname="UnityEngine.Events.PersistentCallGroup" preserve="nothing" serialized="true" />
-    <type fullname="UnityEngine.RectOffset" preserve="nothing" serialized="true" />
-    <type fullname="UnityEngine.Vector2" preserve="nothing" serialized="true" />
-    <type fullname="UnityEngine.Vector4" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Events.ArgumentCache" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.Events.PersistentCallGroup" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Events.PersistentListenerMode" preserve="nothing" serialized="true" />
-    <type fullname="UnityEngine.Events.UnityEvent`1" preserve="nothing" serialized="true" />
-    <type fullname="UnityEngine.Vector2Int" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Events.UnityEvent" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.LayerMask" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Matrix4x4" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Quaternion" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Rect" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.RectOffset" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.Vector2" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.Vector2Int" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Vector3" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.Vector4" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.Events.UnityEvent`1" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Events.UnityEvent`2" preserve="nothing" serialized="true" />
   </assembly>
   <assembly fullname="UnityEngine.DirectorModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
@@ -391,18 +392,18 @@
     <type fullname="UnityEngine.UI.Slider" preserve="all" />
     <type fullname="UnityEngine.UI.Text" preserve="all" />
     <type fullname="UnityEngine.UI.VerticalLayoutGroup" preserve="all" />
+    <type fullname="UnityEngine.EventSystems.EventTrigger/Entry" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.EventSystems.EventTrigger/TriggerEvent" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.UI.AnimationTriggers" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.UI.Button/ButtonClickedEvent" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.UI.ColorBlock" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.UI.FontData" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.UI.MaskableGraphic/CullStateChangedEvent" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.UI.Navigation" preserve="nothing" serialized="true" />
-    <type fullname="UnityEngine.UI.SpriteState" preserve="nothing" serialized="true" />
-    <type fullname="UnityEngine.EventSystems.EventTrigger/Entry" preserve="nothing" serialized="true" />
-    <type fullname="UnityEngine.EventSystems.EventTrigger/TriggerEvent" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.UI.ScrollRect/ScrollRectEvent" preserve="nothing" serialized="true" />
-    <type fullname="UnityEngine.UI.Slider/SliderEvent" preserve="nothing" serialized="true" />
-    <type fullname="UnityEngine.UI.FontData" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.UI.Scrollbar/ScrollEvent" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.UI.Slider/SliderEvent" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.UI.SpriteState" preserve="nothing" serialized="true" />
   </assembly>
   <assembly fullname="UnityEngine.UIModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
     <type fullname="UnityEngine.Canvas" preserve="all" />
