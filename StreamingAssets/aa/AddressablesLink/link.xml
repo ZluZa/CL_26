@@ -140,7 +140,7 @@
     <type fullname="MainCL.Gameplay.MetaGame.StudioUpgradeProgressUnityEvent" preserve="nothing" serialized="true" />
     <type fullname="MainCL.Gameplay.MetaGame.StudioUpgradeSceneObjectBinding" preserve="nothing" serialized="true" />
     <type fullname="MainCL.Data.GlossaryEntryData" preserve="nothing" serialized="true" />
-    <type fullname="MainCL.Gameplay.Cutscene.CutsceneController/JuniorCut" preserve="nothing" serialized="true" />
+    <type fullname="MainCL.Gameplay.Cutscene.CutsceneController/DialogueCut" preserve="nothing" serialized="true" />
     <type fullname="MainCL.Data.RatingThresholds/RatingRange" preserve="nothing" serialized="true" />
     <type fullname="MainCL.Data.FinishMinigameScreen" preserve="nothing" serialized="true" />
     <type fullname="MainCL.Data.FungusDialogueBlockData" preserve="nothing" serialized="true" />
